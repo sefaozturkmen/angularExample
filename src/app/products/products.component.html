@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered mt-2">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}
+                <td>{{product.name}}</td>
+                <td>
+                    <a [routerLink]="['/products',product.id]" class="badge badge-warning">details</a>
+                    <a [routerLink]="['/products',product.id,'edit']" class="badge badge-primary ml-2">edit</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="mt-2">
+    <button class="btn btn-secondary mr-2" (click)="goHome()">Home</button>
+    <button class="btn btn-primary mr-2" routerLink="/products" [queryParams]="{page:1, order:'newest'}">Newest</button>
+    <button class="btn btn-primary mr-2" routerLink="/products" [queryParams]="{page:1, order:'bestselling'}">Best
+        Selling</button>
+    <button class="btn btn-success" routerLink="/products">Refresh</button>
+</div>

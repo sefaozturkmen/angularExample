@@ -1,0 +1,6 @@
+<h4 class="my-4">product works!</h4>
+
+<div><strong>Product ID:</strong> {{selectedProducts.id}}</div> <br>
+<div><strong>Product Name:</strong> {{selectedProducts.name}}</div> 
+<button *ngIf="prevPageId>=0" [routerLink]="['/products', prevPageId]" class="btn btn-secondary mr-2">Önceki</button>
+<button *ngIf="nextPageId>=0" [routerLink]="['/products', nextPageId]" class="btn btn-secondary">Sonraki</button>
