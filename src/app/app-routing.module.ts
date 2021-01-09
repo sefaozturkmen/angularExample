@@ -19,7 +19,8 @@ const appRoutes: Routes = [
     },
     { path: 'users', component: UsersComponent, children:[
       { path: ':name', component: UserComponent },]},
-    { path: '**', component: NotfoundComponent }
+    { path: '**', component: NotfoundComponent },
+    
   ]
 
 @NgModule({
