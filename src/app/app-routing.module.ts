@@ -6,8 +6,7 @@ import { NotfoundComponent } from "./notfound/notfound.component";
 import { EditproductComponent } from "./products/editproduct/editproduct.component";
 import { ProductComponent } from "./products/product/product.component";
 import { ProductsComponent } from "./products/products.component";
-import { UserComponent } from "./users/user/user.component";
-import { UsersComponent } from "./users/users.component";
+import { ShopComponent } from "./shop/shop.component";
 
 
 const appRoutes: Routes = [
@@ -17,8 +16,7 @@ const appRoutes: Routes = [
       { path: ':id', component: ProductComponent },
       { path: ':id/edit', component: EditproductComponent },]
     },
-    { path: 'users', component: UsersComponent, children:[
-      { path: ':name', component: UserComponent },]},
+    { path: 'shop', component: ShopComponent},
     { path: '**', component: NotfoundComponent },
     
   ]

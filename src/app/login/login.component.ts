@@ -8,7 +8,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  message:string;
+  message:string = '';
 
   constructor(private authService: AuthService) {}
 
