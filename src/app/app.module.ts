@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AdminModule } from './admin/admin.module';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthGuardService } from './auth-guard.service';
 import { LoginComponent } from './login/login.component';
 import { ShopComponent } from './shop/shop.component';
+import { CinemaComponent } from './cinema/cinema.component';
 
 
 
@@ -26,12 +28,14 @@ import { ShopComponent } from './shop/shop.component';
     ProductComponent,
     EditproductComponent,
     LoginComponent,
-    ShopComponent
+    ShopComponent,
+    CinemaComponent
   ],
   imports: [
     BrowserModule,
     AdminModule,
-    AppRoutingModule],
+    AppRoutingModule,
+    HttpClientModule],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })

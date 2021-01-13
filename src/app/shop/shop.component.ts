@@ -10,6 +10,7 @@ export class ShopComponent implements OnInit {
 
   title='Market'
   message='Sipariş Ver!'
+  addMessage=''
 
  shop: Items[] = [
     {id:1,name:'mouse', price:50 , description:'rgb mouse', imageUrl:'https://images.pexels.com/photos/5745513/pexels-photo-5745513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
@@ -21,6 +22,13 @@ export class ShopComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addProduct(item:any){
+    this.addMessage= `${item.name} sepete eklendi.`
+    setTimeout(() => {
+      this.addMessage=''
+    }, 2000);
   }
 
 }

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { CinemaComponent } from "./cinema/cinema.component";
 
 import { HomeComponent } from "./home/home.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
       { path: ':id/edit', component: EditproductComponent },]
     },
     { path: 'shop', component: ShopComponent},
+    { path: 'cinema', component: CinemaComponent},
     { path: '**', component: NotfoundComponent },
     
   ]
