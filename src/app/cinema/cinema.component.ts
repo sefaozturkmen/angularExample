@@ -14,7 +14,7 @@ export class CinemaComponent implements OnInit {
   constructor(private cinemaService: CinemaService) { }
 
   imgUrl = 'https://image.tmdb.org/t/p/w500'
-  movieList = []
+  movieList:any[] = []
 
   ngOnInit(): void { 
     this.cinemaService.getCinema().subscribe(data=>{
